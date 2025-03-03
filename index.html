@@ -1,88 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Nozi</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-
-<div class="navbar" id="myNavbar">
-   
-    <a href="index.html" class="active"><i class="fa fa-home"></i> Home</a>
-    <a href="about.html">About</a>
-    <a href="service.html">Services</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-   
-    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-
-<div class="homepage">
-    <div class="left">
-        <img src="logo.png" alt="Placeholder Image">
-    </div>
-    <div class="right">
-        <div class="text">
-            <h2 class="home-header">Welcome to Ndaba Psychological Services</h2>
-            <p>Embrace a path to mental well-being with compassionate care at our private practice. Discover support, healing, and empowerment through personalized guidance with our experienced Clinical Psychologist.</p>
-        </div>
-        <button class="btn" id="redirectButton">
-            <span class="icon">&#x1F680;</span>
-            <span class="btn-txt">Book Session Now</span>
-        </button>
-        <p class="qoute"><i>"I believe that a different therapy must be constructed for each patient because each has a unique story"-<strong> D. Yalom</i></strong>
-        </p>
-        <div class="text">
-            <p > In life we all experience problems in living from time to time. Whether it is trauma, depression, anxiety, career frustration, or challenges in relationships, l can assist you today in taking the next step for your mental wellbeing.
-            </p>
-        </div>
-       
-      
-    </div>
-</div>
-
-
-
-<script>
-
-var redirectButton = document.getElementById('redirectButton');
-
-
-redirectButton.addEventListener('click', function() {
-   
-    var redirectTo = 'https://calendly.com/noziphondaba66/30min?month=2024-02';
-
-    
-    window.location.href = redirectTo;
-});
-    
-    function toggleNavbar() {
-        var x = document.getElementById("myNavbar");
-        if (x.className === "navbar") {
-            x.className += " responsive";
-        } else {
-            x.className = "navbar";
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        var navLinks = document.querySelectorAll('.navbar a');
-
-        navLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                navLinks.forEach(function (navLink) {
-                    navLink.classList.remove('active');
-                });
-
-                this.classList.add('active');
-            });
-        });
-    });
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nozipho-ndaba</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
