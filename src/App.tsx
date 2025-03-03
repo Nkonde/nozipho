@@ -47,7 +47,7 @@ function App() {
           <div className="about-grid">
             <div>
               <img
-                src="./src/images/dioxy.png"
+                src="/src/images/dioxy.png"
                 alt="Psychologist portrait"
                 className="about-image"
               />
